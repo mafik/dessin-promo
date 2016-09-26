@@ -1,0 +1,295 @@
+<!doctype html>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Dosis:300|Open+Sans:300&subset=latin,latin-ext,cyrillic-ext,cyrillic,greek-ext,greek' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="/favicon.ico" />
+<title>Dessin</title>
+<style>
+html, body {
+	height: 100%;
+}
+html {
+	font-family: "Open Sans", sans-serif;
+	font-size: 24px;
+}
+#logo {
+	max-width: 50%;
+	margin: 100px auto;
+}
+h2, h3, h4 {
+	font-family: "Dosis", sans-serif;
+	font-weight: normal;
+}
+h2 {
+	font-size: 3em;
+}
+body {
+	margin: 0;
+	color: #666;
+	text-align: center;
+	background: #ddd;
+}
+#social {
+	margin: 4em auto 4em auto;
+	display: inline-block;
+	width: 300px;    
+}
+#bottom-border {
+	background: url("/border.png");
+	height: 29px;
+    margin-bottom: -1px;
+}
+#bottom {
+	display: block;
+	padding: 2em 1em;
+    background: #222222; /* Old browsers */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMjIyMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #222222 0%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#222222), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #222222 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #222222 0%,#000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #222222 0%,#000000 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #222222 0%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#000000',GradientType=0 ); /* IE6-8 */
+	color: #aaa;
+}
+.small {
+	font-size: 14px;
+	max-width: none;
+	color: #888;
+
+}
+#bottom p {
+	margin-bottom: 2em;
+}
+p {
+	max-width: 20em;
+	margin: 1em auto;
+}
+#movie {
+	margin: 3em 0;
+}
+#background {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+
+	-webkit-perspective: 300px;
+	   -moz-perspective: 300px;
+	    -ms-perspective: 300px;
+	     -o-perspective: 300px;
+	        perspective: 300px;
+
+	-webkit-perspective-origin: 50% 50%;
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	     -o-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+section {
+	-webkit-transform: translateZ(0px);
+	   -moz-transform: translateZ(0px);
+	    -ms-transform: translateZ(0px);
+	     -o-transform: translateZ(0px);
+	        transform: translateZ(0px);
+
+	-webkit-transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	   -moz-transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	    -ms-transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	     -o-transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	        transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+
+	-webkit-transform-origin: 100% 50%;
+	   -moz-transform-origin: 100% 50%;
+	    -ms-transform-origin: 100% 50%;
+	     -o-transform-origin: 100% 50%;
+	        transform-origin: 100% 50%;
+}
+
+section.past {
+	-webkit-transform: translateX( -70% );
+	   -moz-transform: translateX( -70% );
+	    -ms-transform: translateX( -70% );
+	     -o-transform: translateX( -70% );
+	        transform: translateX( -70% );
+}
+#timefor {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+#countdown {
+	margin-top: 0;
+	margin-bottom: 2em;
+}
+#logo {
+	position: relative;
+	width: 60%;
+}
+input {
+	font-family: "Dosis";
+	margin: 0em;
+	max-width:80%;
+	min-width:50%;
+	font-size:50px;
+	color:#FFF;
+	vertical-align:middle;
+	line-height:1.3;
+	overflow:hidden;
+    border: 0;
+	text-align:left;
+	box-shadow:0 1px 0 rgba(255,255,255,.15), 0 2px 4px rgba(0,0,0,.2) inset, 0 0 12px rgba(255,255,255,.1);
+	padding:8px 20px;
+	background:rgba(0,0,0,.5);
+	border-radius:10px; }
+
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #ccc;
+	display:inline-block;
+	color:#777777;
+	font-family:"Dosis";
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffffff;
+	padding: 15px;
+	margin: 1em;
+}.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+.message {
+    color: #44ff44;
+    margin: 1em;
+    display: none;
+}
+.error {
+    color: #ff4444;
+    margin: 1em;
+    display: none;
+}
+#audio {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+#audio span {
+	font-size: 14px;
+	text-align: left;
+	position: relative;
+	top: -10px;
+}
+#audio a {
+	color: #666;
+}
+footer {
+    color: #555;
+    float: right;
+    font-size: 14px;
+}
+footer a {
+    color: #555;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #888;
+    text-decoration: underline;
+}
+</style>
+<canvas id="background"></canvas>
+<div id="content">
+	<img src="/logo.svg" alt="Dessin" id="logo" />
+	<h2 id="timefor">Czas na mobilną rewolucję</h2>
+	<h3 id="countdown"></h3>
+	<article><p>Dessin (czyt. dizajn) to nowa aplikacja, która łączy twoje dane na wspólnej przestrzeni wewnątrz dowolnego urządzenia z Androidem.</p></article>
+	<div id="movie"></div>
+	<section>
+		<h2>Poznaj mapy myśli</h2>
+		<p>Kiedy wszystkie twoje dane są tak blisko, wyszukiwanie przestaje być problemem.</p>
+		<p>Mapy myśli to notatki, w których każdy element znajduje się jak najbliżej podobnych sobie. To sprawia, że łatwiej znaleźć i ciężej zapomnieć rzeczy, których szukasz.</p>
+	</section>
+	<section>
+		<h2>Wyjątkowe menu</h2>
+		<p>Dzięki wielopoziomowym menu przesuwanym będziesz mógł uruchomić dowolną akcję z każdego miejsca na ekranie. Dotknij gdziekolwiek i przesuń palcem przez swój wybór.</p>
+	</section>
+	<section>
+		<h2>Zobacz jak szkice ożywają</h2>
+		<p>Twoje notatki mogą znaczyć więcej kiedy wykorzystają pełen potencjał sprzętu na którym działają. Zautomatyzuj swój telefon, prototypuj pomysły lub zwyczajnie baw się nowymi możliwościami.</p>
+	</section>
+	<div id="social">
+
+	  <div id="fb-root"></div>
+	  <script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	  <div class="g-page" data-href="//plus.google.com/112343231896739382693" data-showcoverphoto="false" data-rel="publisher"></div>
+	  <script type="text/javascript">
+		window.___gcfg = {lang: 'pl'};
+		(function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/plusone.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		})();
+	  </script>
+	  <div class="fb-like-box" data-href="https://www.facebook.com/pages/Dessin/410850499024675" data-width="292" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
+	</div>
+	<div id="bottom-border"></div>
+	<div id="bottom">
+		<p id="info">Zostaw swój email lub wróć tu po 1&nbsp;października, aby pobrać Dessina.</p>
+		<div id="email_div"><input id="email" type='text' /></div>
+		<div id="message" class="message">Email zapisany.</div>
+		<div id="error" class="error">To nie jest poprawny email.</div>
+		<p class="small">Email zostanie wykorzystany do jednorazowego powiadomienia i zapomniany po publikacji.</p>
+		<div><a href="#" class="button" id="leave_mail">Zostaw email</a></div>
+
+		<footer>&copy; <a href="http://mrogalski.eu/">Marek Rogalski</a> 2013 (<a href="https://plus.google.com/112343231896739382693" rel="publisher">Google+</a>)</footer>
+	</div>
+</div>
+
+<div id="audio">
+	<audio id="audioElement" controls autoplay>
+		<source src="/nithen_-_nithen_naidoo_(ft._donnie_ozone)_-_my_way.ogg" type="audio/ogg">
+		<source src="/nithen_-_nithen_naidoo_(ft._donnie_ozone)_-_my_way.mp3" type="audio/mpeg">
+	</audio>
+	<span>by <a href="http://ccmixter.org/people/nithen" target="_blank">nithen naidoo</a></span>
+</div>
+<script src="/jquery-1.9.1.min.js"></script>
+<script src="/countdown.min.js"></script>
+<script src="/common.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-52136f8617355295"></script>
